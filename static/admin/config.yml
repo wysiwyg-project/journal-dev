@@ -30,6 +30,9 @@ collections:
     folder: "content/team" 
     create: true 
     slug: "{{slug}}" 
+    filter:
+      field: language
+      value: en
     fields: 
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Role", name: "role", widget: "string" }
