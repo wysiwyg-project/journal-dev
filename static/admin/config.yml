@@ -26,7 +26,7 @@ collections:
       - { label: 'Content', name: 'body', widget: 'markdown' }
       - {label: "Layout", name: "layout", widget: "hidden", default: "static"}
   - name: "team" 
-    label: "Team" 
+    label: "Team [en]" 
     folder: "content/team" 
     create: true 
     slug: "{{slug}}" 
@@ -38,7 +38,8 @@ collections:
       - { label: "Role", name: "role", widget: "string" }
       - { label: "Website", name: "website", widget: "string" }
       - { label: 'Content', name: 'body', widget: 'markdown' }
-      - {label: "Layout", name: "layout", widget: "hidden", default: "team"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "team" }
+      - { label: "Language", name: "language", widget: "hidden", default: "en" }
 
 
       
