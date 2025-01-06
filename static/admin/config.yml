@@ -16,19 +16,19 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: 'Content', name: 'body', widget: 'markdown' }
-  - name: "journal-fr"
-    label: "Journal [fr]" 
-    folder: "content/journal" 
-    create: true 
-    slug: "{{slug}}.fr" 
+  - name: "journal-fr" # Used in routes, e.g., /admin/collections/blog
+    label: "Journal [fr]" # Used in the UI
+    folder: "content/journal" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}.fr" # Filename template, e.g., YYYY-MM-DD-title.md
     filter:
       field: language
       value: fr
-    fields: 
+    fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: 'Content', name: 'body', widget: 'markdown' }
-        - { label: "Language", name: "language", widget: "hidden", default: "fr" }
+      - { label: "Language", name: "language", widget: "hidden", default: "fr" }
   - name: "static" 
     label: "Other pages" 
     folder: "content/static" 
