@@ -16,6 +16,19 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: 'Content', name: 'body', widget: 'markdown' }
+  - name: "journal-fr"
+    label: "Journal [fr]" 
+    folder: "content/journal" 
+    create: true 
+    slug: "{{slug}}.fr" 
+    filter:
+      field: language
+      value: fr
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+        - { label: "Language", name: "language", widget: "hidden", default: "fr" }
   - name: "static" 
     label: "Other pages" 
     folder: "content/static" 
