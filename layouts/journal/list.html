@@ -8,6 +8,15 @@
 			<h1>{{ i18n "section.journal" }}</h1>
 		</header>
 	
+		<ul>
+			{{ range .Pages }} 
+			  <li>
+				<a href="{{ .Permalink }}">{{ .Title }}</a> 
+			  </li>
+			{{ else }}
+			  <p>No pages found.</p>
+			{{ end }}
+		  </ul>
 		
 
 		{{ $allPosts := slice }}
