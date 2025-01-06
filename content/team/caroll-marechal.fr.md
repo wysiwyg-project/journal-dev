@@ -2,6 +2,7 @@
 title: Caroll Maréchal
 role: 'Post-doc, EHESS'
 weight: 4
+language: fr
 ---
 
 

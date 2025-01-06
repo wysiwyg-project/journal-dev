@@ -3,6 +3,7 @@ title: Sandra Bischler-Hartmann
 role: 'Post-doc, Folkwang University of the Arts in Essen'
 website: ''
 weight: 2
+language: fr
 ---
 
 

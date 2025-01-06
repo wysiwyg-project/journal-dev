@@ -1,5 +1,7 @@
 ---
 title: Advisory Board
+language: en
+
 ---
 
 * Joost Grootens

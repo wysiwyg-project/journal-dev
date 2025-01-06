@@ -3,6 +3,7 @@ title: Julie Blanc
 role: 'Post-doc, HEAD – Genève'
 website: 'https://julie-blanc.fr/'
 weight: 3
+language: en
 ---
 
 

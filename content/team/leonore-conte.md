@@ -3,6 +3,7 @@ title: Léonore Conte
 role: 'Post-doc, HEAD – Genève'
 website: 'http://leonoreconte.com/'
 weight: 5
+language: en
 ---
 
 

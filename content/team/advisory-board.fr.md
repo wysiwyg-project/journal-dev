@@ -1,5 +1,6 @@
 ---
 title: Comité consultatif
+language: fr
 ---
 
 * Joost Grootens
