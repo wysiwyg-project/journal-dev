@@ -40,6 +40,22 @@ collections:
       - { label: 'Content', name: 'body', widget: 'markdown' }
       - { label: "Layout", name: "layout", widget: "hidden", default: "team" }
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
+  - name: "team" 
+    label: "Team [fr]" 
+    folder: "content/team" 
+    create: true 
+    slug: "{{slug}}.fr" 
+    filter:
+      field: language
+      value: fr
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Website", name: "website", widget: "string" }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "team" }
+      - { label: "Language", name: "language", widget: "hidden", default: "fr" }
+
 
 
       
