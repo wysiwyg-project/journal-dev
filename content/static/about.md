@@ -1,5 +1,8 @@
 ---
 title: About
+layout: static
+type: static
+url: about
 ---
 The motto WYSIWYG, standing for “What You See Is What You Get”, was coined and quickly adopted in the very early 1980s in the field of desktop publishing (DTP) to describe systems allowing to visualize [on the screen a page](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal), j’ai essayé un changement
 

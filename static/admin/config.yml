@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: "wysiwyg-project/journal-dev"
+  branch: main
+  auth_type: oauth
+  client_id: "Iv23liVWyVtSCSrmYi8k"
+media_folder: "static/uploads" 
+public_folder: "/uploads"
+collections:
+  - name: "journal" # Used in routes, e.g., /admin/collections/blog
+    label: "Journal" # Used in the UI
+    folder: "content/journal" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+  - name: "static" 
+    label: "Other pages" 
+    folder: "content/static" 
+    create: true 
+    slug: "{{slug}}" 
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+      - {label: "Layout", name: "layout", widget: "hidden", default: "static"}
+
+
+      
+      
