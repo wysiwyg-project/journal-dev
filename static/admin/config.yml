@@ -40,7 +40,7 @@ collections:
       - { label: 'Content', name: 'body', widget: 'markdown' }
       - { label: "Layout", name: "layout", widget: "hidden", default: "team" }
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
-  - name: "team" 
+  - name: "team-fr" 
     label: "Team [fr]" 
     folder: "content/team" 
     create: true 
