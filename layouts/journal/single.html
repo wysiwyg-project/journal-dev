@@ -12,14 +12,6 @@
 			{{- .Title -}}
 		</h1>
 
-
-
-
-
-		<!-- {{- partial "tags.html" . -}}
-		{{- partial "categories.html" . -}} -->
-
-	
 	
 
 	</header>
@@ -31,9 +23,36 @@
 		</time>
 	</div>
 
-			{{ partial "i18n.html" . }}
+			
+			{{ if eq .Language.Lang "fr" }}
+		
+			  {{ with .Params.translation }}
+			  <div class="utils" id="i18n">
+				<p>
+			  Text also in english:
+				<a href="{{ . }}">{{ . }}</a>
+				</p>
+				</div>
+			{{ end }}
+			{{ else }}
+			
+			{{ with .Params.translation }}
+			<div class="utils" id="i18n">
+				<p>
+					Texte également disponible en français:
+				<a href="{{ . }}">{{ . }}</a>
+			</p>
+		</div>
+			{{ end }}
+			{{ end }}
+			
+
+			
 
 
+
+
+		
 
 
 	<div class="content post__content">

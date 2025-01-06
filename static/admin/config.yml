@@ -11,7 +11,7 @@ collections:
     label: "Journal [en]" # Used in the UI
     folder: "content/journal" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     filter:
       field: language
       value: en
@@ -20,11 +20,12 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: 'Content', name: 'body', widget: 'markdown' }
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
+      - { label: "URL of translation in french", name: "translation", widget: "string" }
   - name: "journal-fr" # Used in routes, e.g., /admin/collections/blog
     label: "Journal [fr]" # Used in the UI
     folder: "content/journal" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}.fr" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}.fr" # Filename template, e.g., YYYY-MM-DD-title.md
     filter:
       field: language
       value: fr
@@ -33,6 +34,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: 'Content', name: 'body', widget: 'markdown' }
       - { label: "Language", name: "language", widget: "hidden", default: "fr" }
+      - { label: "URL of translation in english", name: "translation", widget: "string" }
   - name: "static" 
     label: "Other pages" 
     folder: "content/static" 
