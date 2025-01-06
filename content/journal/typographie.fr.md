@@ -2,6 +2,7 @@
 title: "Un texte sur la typographie"
 date: 2024-11-07T23:00:00.000Z
 language: fr
+translation: http://localhost:1313/journal/typography/
 ---
 
 La typographie (souvent abrégée en « typo ») regroupe les différents procédés d’impression utilisant des caractères et des formes en relief. Le terme « typographie » peut aussi désigner l’art d’utiliser les différents types de caractères dans un but esthétique et pratique.
