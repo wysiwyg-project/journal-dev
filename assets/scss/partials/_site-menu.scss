@@ -1,0 +1,132 @@
+#menu {
+  ul{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  li{
+    font-size: var(--font-size-big);
+    line-height: calc(var(--baseline)*2);
+    transition: text-indent 0.2s linear 0s;
+
+
+
+   
+    &:hover{
+      text-indent: 1.5ch;
+      color: var(--accent);
+      &::before{
+        position: absolute;
+        left: -1.5ch;
+        content: var(--arrow) " "
+      }
+    }
+    &.active{
+      text-indent: 1.5ch;
+      &::before{
+        position: absolute;
+        left: -1.5ch;
+        content: var(--arrow) " "
+      }
+     
+    }
+  }
+}
+
+
+span {
+  transition: all 0.2s linear 0s;
+  
+  &:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+  }
+  
+  &:hover {
+    text-indent: -20px;
+    
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}
+
+
+
+// BUTTON MENU -----------------------------------------------------------
+
+#menu-toggle{  
+  
+    @include button(var(--yellow-bg), var(--black));
+    --button-size: calc(var(--button-size-original) + 2px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    display: none;
+
+    --color: var(--yellow-bg);
+    --size: 14px;
+    --height: 2px;
+    cursor: pointer;
+    
+    span {
+      position: relative;
+      display: block;
+      width: var(--size);
+      height: var(--height);
+      background: var(--color);
+      transition: all .2s ease-in-out;
+      
+      &:before, &:after {
+        position: absolute;
+        left: 0px;
+        background: var(--color);
+        content: '';
+        width: var(--size);
+        height: var(--height);
+        transition: all .2s ease-in-out;
+      }
+      
+      &:before {
+        top: calc(var(--height)*-2);
+      }
+      
+      &:after {
+        top: calc(var(--height)*2);
+      }
+    }
+  }
+  
+  #menu-toggle.menu-active {
+    --left: 3px;
+    --top: 3px;
+    span {
+      background: transparent;  
+      
+      &:before {
+        transform: rotate(45deg) translate(var(--left), var(--top));
+      }
+      
+      &:after {
+        transform: rotate(-45deg) translate(var(--left), calc(var(--left)*-1));
+      }
+    }
+  } 

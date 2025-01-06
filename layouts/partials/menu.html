@@ -1,0 +1,46 @@
+<nav role="navigation" id="menu" class="hidden">
+
+    {{ $defaultLang := index .Site.Languages 0 }}
+    {{ $lang := .Site.Language.Lang | lower }}
+    {{ $currentPage := . }}  
+
+    {{ if .Site.Menus.main }}
+    <ul>
+        {{ range .Site.Menus.main }}
+        {{ $key := .Name | lower }}
+        {{ $currentPermalink := $currentPage.Permalink }}  
+
+        <li class="{{ if strings.Contains $currentPermalink .URL }}active{{ end }}">
+            <a href="{{ if eq $lang $defaultLang.LanguageCode }}{{ .URL }}{{ else }}/{{ $lang }}{{ .URL }}{{ end }}">
+                {{ i18n (printf "menu.%s" $key) }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+{{/* WITHOUT MULTINLINGUAL: */}}
+
+{{/*
+<!-- <nav role="navigation">
+	{{ if .Site.Menus.main }}
+	<ul>
+		{{ range .Site.Menus.main }}
+		<li><a href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a></li>
+		{{ end }}
+	</ul>
+	{{ end }}
+</nav>  -->
+*/}}

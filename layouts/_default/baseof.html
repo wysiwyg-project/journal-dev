@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,minimum-scale=1">
+
+	<link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
+	
+	<!-- {{/* NOTE: the Site's title, and if there is a page title, that is set too */}} -->
+	<title>{{ block "title" . }} {{ i18n "site.title" }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
+
+	 <!-- Compilation SCSS en CSS avec Hugo Pipes -->
+	 {{ $styles := resources.Get "scss/main.scss" | css.Sass }}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}">	
+
+	{{ $js := resources.Get "js/main.js" }}   <!-- Récupérer le fichier main.js depuis le dossier 'assets/js' -->
+    <script src="{{ $js.RelPermalink }}"></script>
+
+	<link rel="stylesheet" href="/fonts/ChicagoFLF/stylesheet.css">
+	<link rel="stylesheet" href="/fonts/FK_Grotesk-Neue/stylesheet.css">
+	
+</head>
+
+{{ $pageType := "default" }}  
+{{ if eq .Kind "home" }}
+    {{ $pageType = "home" }}  
+{{ else }}
+    {{ $pageType = .Type }} 
+{{ end }}
+
+<body class="page-{{ $pageType }}" data-name="{{ with .File }}{{ .BaseFileName }}{{ else }}default{{ end }}">
+	
+
+	{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+
+	<button id="menu-toggle" aria-label="Open menu"><span></span></button>
+	{{ partial "menu.html" . }}
+
+
+	{{ partial "aside-buttons.html" . }}
+			
+	
+	<main role="main">
+
+		<!-- {{ if ne .Kind "home" }}
+			{{ partial "breadcrumbs.html" . }}
+		{{ end }} -->
+
+		{{ block "main" . }}{{ end }}
+
+	</main>
+	
+	<div id="grid-paper" aria-hidden="true"><div id="grid-paper-inside"></div></div>
+	<div id="baseline-grid" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-1" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-2" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-3" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-4" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-5" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-6" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-7" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-8" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-9" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-10" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-11" aria-hidden="true"></div>
+	<div class="grid-item" id="grid-item-12" aria-hidden="true"></div>
+	<!-- {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }} -->
+</body>
+
+</html>

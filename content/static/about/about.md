@@ -1,0 +1,33 @@
+---
+title: About
+layout: static
+type: static
+url: about
+---
+
+The motto WYSIWYG, standing for “What You See Is What You Get”, was coined and quickly adopted in the very early 1980s in the field of desktop publishing (DTP) to describe systems allowing to visualize [on the screen a page](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal) 
+
+- as it will ultimately be printed (Seybold, 2019). 
+- It then came to describe every interactive graphic interfaces used to write, 
+- “paint” or design – as featured on the most-popular Apple Macintosh computer. WYSIWYG interfaces and software gave designers and editors unprecedented control over layout, typography, 
+- and visual elements in print media. Boosting the creativity and possibility to experiment, these tools resulted in a more intuitive, 
+
+visual-oriented and less-structured *practice of design* – therefore questioning the accuracy of the concept of “automation” when it comes to design software (Blauvelt, 2012, McVarish, 2017).
+
+
+## Research stream 1: Economy and international networks of graphic design digital revolution
+
+WYSIWYG aims at documenting an understudied technological transition. We intend to understand how and when American graphic design software were launched, marketed and sold in Switzerland and France. The project will focus on the most popular software: Aldus PageMaker (1985), Ready!Set!Go! (1985), QuarkXPress (1987), Adobe Photoshop (1991) and InDesign (1999), as well as a few computer brands used by graphic design professionals (Macintosh from 1984, PC from the introduction of Windows in 1987, Amiga in 1987). Who were the local players in the promotion of these tools? Which software were used first and for what types of work? When did printing plants go digital? From the point of view of freelance graphic designers, how was the costly investment in a computer and its software financed and justified? We expect to highlight continuities and discrepancies between the two countries and inside Switzerland on account of different levels of familiarity with English language, and more broadly with the English-speaking graphic design scene.  
+
+## Research stream 2: A profession in transition
+
+WYSIWYG will document how digital tools changed graphic design practice between 1980 and 2000. It will investigate changes in stylistic features of graphic artifacts, but also gather testimonies on how computerization impacted graphic designer’s activities, workflows, workspaces, and bodies. One of WYSIWYG’s hypothesis is that the uptake of graphic design digital tools articulates with debates on authorship and ethics in graphic design, as graphic designers have faced the emergence of non-professional DTP, as well as the broadening of their tasks to those once taken in charge by other professionals of the graphic chain (typographic proofreading, photoengraving). In better-known English-speaking countries, this has produced strongly authored projects, and a vein of digital craft which we expect to find understudied counterparts in France and Switzerland. We also wish to gather testimonies on silent revolution of everyday typesetting and lay out, through a focus on the publishing and press industry. We will work on the hypothesis that computers have changed the gendered repartition of roles in the graphic chain and given women designers the opportunity to gain more recognition. 
+
+
+## Research stream 3: Experimenting with the Digital in Graphic Design Education
+
+Graphic design’s digital turn has been visible in the evolution of graphic design teaching over the period 1980 to 2000. Yet this transition has not or barely been studied, especially for France and Switzerland. Did Swiss and French graphic design schools and curricula initiate or follow the transition to digital? How were computers used within graphic design pedagogy, and can we trace an evolution from experimental to more professional “ready-for-work” training? This RS’s hypothesis is that the digital was the catalyst of an unprecedented pedagogical renewal, in which the computer was used as tool, medium and aesthetic impulse, in the framework of a highly experimental pedagogy. RS3 will mainly build on the archives of 3 key graphic design schools: HGK (Basel), ZHdK (Zürich) and Ensad (Paris), which include exclusive students works, syllabi, brochures, and administrative records. The analysis of archive material will be complemented with oral history methods. 
+
+## Research stream 4: Beyond WYSIWYG: publishing for print and web 
+
+WYSIWYG research program is rooted in contemporary graphic design practice with an eye on the future of web-to-print, creative coding, and automation of graphic design through AI. In the wake of Taylor Conrad’s interrogation “What has WYSIWYG done to us?” (1996), this RS explores the blurry boundary between WYSIWYG and non-WYSIWYG in the framework of online communication, web publishing, mobile apps and AI services. It will focus on specific hybrid creative processes in relationship to web technologies and multisupport publishing including web-to-print practices (use of HTML and CSS to create printed documents) and responsive web publication rooted into the framework of free and open source culture. On the other side, WYSIWYG paradigm has remained central in wide-audience design apps such as Canva (2010), that extend and renew the division between professional and non-professional graphic design. We also wish to investigate the future of WYSIWYG in the light of emerging vocal and neural interfaces.

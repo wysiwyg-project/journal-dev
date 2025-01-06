@@ -1,0 +1,50 @@
+[site]
+title = "WYSIWYG"
+baseline = "Enquête sur l’évolution des&nbsp;logiciels de&nbsp;graphisme en&nbsp;Suisse et en&nbsp;France, 1880&nbsp;-&nbsp;aujourd'hui "
+
+
+# Menu principal
+[menu]
+home = "Accueil"
+about = "À propos"
+posts = "Blog"
+journal = "Journal"
+bibliography = "Bibliographie"
+team = "Équipe"
+publications = "Publications"
+contact = "Contact"
+
+[section]
+home = "Accueil"
+about = "À propos"
+posts = "Blog"
+journal = "Journal"
+projects = "Projets"
+authors = "Auteur·ices"
+bibliography = "Bibliographie"
+team = "Équipe"
+contact = "Contact"
+
+# Messages et notifications
+[messages]
+error_404 = "Désolé, la page que vous cherchez n'existe pas."
+form_submit_success = "Votre formulaire a été soumis avec succès."
+form_submit_error = "Erreur lors de l'envoi du formulaire. Veuillez réessayer."
+
+# Pied de page
+[footer]
+copyright = "Tous droits réservés"
+follow_us = "Suivez-nous sur les réseaux sociaux"
+
+# Boutons
+[buttons]
+read_more = "Lire plus"
+submit = "Envoyer"
+cancel = "Annuler"
+
+
+# informations
+[informations]
+date = "Publié le"
+translation = "Page également disponible en "
+website = "Site web"

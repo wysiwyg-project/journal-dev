@@ -1,0 +1,54 @@
+[site]
+title = "WYSIWYG"
+baseline = "An Investigation in&nbsp;the&nbsp;updake of&nbsp;graphic design software in&nbsp;Switzerland and&nbsp;France, 1880&nbsp;-&nbsp;today"
+
+
+# Main menu
+[menu]
+home = "Home"
+about = "About"
+posts = "Posts"
+journal = "Journal"
+bibliography = "Bibliography"
+publications = "Publications"
+team = "Team"
+contact = "Contact"
+
+[section]
+home = "Home"
+about = "About"
+posts = "Posts"
+journal = "Journal"
+authors = "Authors"
+bibliography = "Bibliography"
+team = "Team"
+contact = "Contact"
+
+# Messages and notifications
+[messages]
+welcome_message = "Welcome, we are glad to see you here!"
+error_404 = "Sorry, the page you are looking for does not exist."
+form_submit_success = "Your form has been submitted successfully."
+form_submit_error = "Error submitting the form. Please try again."
+
+# Footer
+[footer]
+copyright = "All rights reserved"
+follow_us = "Follow us on social media"
+
+# Buttons
+[buttons]
+read_more = "Read more"
+submit = "Submit"
+cancel = "Cancel"
+
+
+[home]
+projects = "Recent projects"
+
+
+# informations
+[informations]
+date = "Published on"
+translation = "Text also in english:"
+website = "Website"

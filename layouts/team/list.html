@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section id="list-team">
+
+    <header class="page-title {{ .Type }}__header">
+		<h1>{{ i18n "section.team" }}</h1>
+	</header>
+
+
+
+    <div class="list-team__container">
+		{{ range .Paginator.Pages }}
+        <article class="list-team__item">
+			
+            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+           
+            {{ if .Params.role }}
+                <p class="role">{{ .Params.role }}</p>
+            {{ end }}
+
+            <div class="content">
+                {{ .Content | replaceRE `<a ([^>]+)>` `<a $1 target="_blank">` | safeHTML }}
+
+            </div>
+            {{ if .Params.website }}
+            <p class="website">{{ i18n "informations.website" | safeHTML }}: <a href="{{ .Params.website }}" target="_blank">{{ .Params.website }}</a></p>
+            {{ end }}
+        </article>
+		{{ end }}
+
+
+	</div>
+	{{- template "_internal/pagination.html" . -}}
+</section>
+{{ end }}

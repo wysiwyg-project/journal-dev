@@ -1,0 +1,30 @@
+
+{{ define "main" }}
+{{ $section := .Site.GetPage "section" .Section }}
+<article class="{{ .Type }}">
+
+	<header class="page-title {{ .Type }}__header">
+		<h1>{{- .Title -}}</h1>
+	</header>
+
+
+
+	<div class="content {{ .Type }}__content">
+		{{ .Content
+			| replaceRE `<a ([^>]+)>` `<a $1 target="_blank">`
+			| replaceRE `<p><img alt="([^"]+)" src="([^"]+)" title="([^"]+)"></p>` 
+						`<figure><img alt="$1" src="$2" title="$3"><figcaption>$3</figcaption></figure>`
+			| replaceRE `<p><img src="([^"]+)" title="([^"]+)"></p>` 
+						`<figure><img src="$1" title="$2"><figcaption>$2</figcaption></figure>`
+			| replaceRE `<p><img alt="([^"]+)" src="([^"]+)"></p>` 
+						`<figure><img alt="$1" src="$2"></figure>`
+			| replaceRE `<p><img src="([^"]+)"></p>` 
+						`<figure><img src="$1"></figure>`
+			| safeHTML 
+		}}
+		
+	</div>
+
+
+</article>
+{{ end }}

@@ -1,0 +1,33 @@
+#aside-buttons{
+
+
+    button{
+        margin-left: var(--button-margin);
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > a{
+            color: currentColor;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+
+        }
+
+    }
+
+
+
+    button{
+        @include button(var(--yellow-bg), var(--black));
+        --button-size: calc(var(--button-size-original) + 2px);
+    }
+
+
+}

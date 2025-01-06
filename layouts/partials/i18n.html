@@ -1,0 +1,24 @@
+<!-- 
+{{ if .IsTranslated }}
+  {{ range .Translations }}
+  <p>
+    {{ i18n "informations.translation" }} <a href="{{ .RelPermalink }}"> [{{ .Language.Lang | upper }}] {{ .LinkTitle }}</a>
+  </p>
+  {{ end }}
+{{ end }}
+ -->
+
+{{ if .IsTranslated }}
+<div class="utils" id="i18n">
+{{ range .Translations }}
+ <p>
+{{ if eq .Language.Lang "fr" }}
+  Texte également disponible en français:
+{{ else }}
+Text also in english:
+{{ end }}
+    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+ </p>
+ {{ end }}
+</div>
+{{ end }}

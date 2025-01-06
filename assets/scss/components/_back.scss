@@ -1,0 +1,21 @@
+.back{
+    @include button-text();
+
+    a::before{
+        content: "←";
+        padding-right: 0.5ch;
+    }
+    
+    // display: inline-block;
+    // box-shadow: 0px 0px 0px 1px currentColor;
+    // height: calc(var(--button-size)*0.75);
+    // border-radius: calc(var(--button-size)*0.75/2);
+    // padding: 0ch 1ch;
+
+    &:hover{
+        color: var(--accent);
+    }
+
+    margin-top: calc(var(--baseline) - 8px);
+    margin-bottom: calc(var(--baseline) + 6px);
+}

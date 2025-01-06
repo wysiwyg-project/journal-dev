@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+
+<!-- {{/* Create a variable with both sections to use in multiple places. */}} -->
+{{ $posts := where .Site.RegularPages "Section" "journal" }}
+
+<!-- {{/* Check to see if the sections are defined for ranging through them */}} -->
+{{ $post_count := len $posts }}
+
+
+
+	<p class="baseline">{{ i18n "site.baseline" | safeHTML }}</p>
+
+
+
+	<p class="details">A research project by HEAD –&nbsp;Genève, Haute école d'art et de design</p>
+
+	<div id="fns">
+		<p>Supported by:</p>
+
+		<div id="logo-fns">
+			<img src="/uploads/logos/snf.svg">
+		</div>
+	</div>
+
+
+	<div class="icon-theme" id="icon_draw-curve">{{ partial "icons-theme/draw-curve-icon.svg" }}</div>
+	<div class="icon-theme" id="icon_ruler-triangle">{{ partial "icons-theme/ruler-triangle-icon.svg" }}</div>
+	<div class="icon-theme" id="icon_marquee">{{ partial "icons-theme/marquee-rectangle-tool-icon.svg" }}</div>
+	<div class="icon-theme" id="icon_object-select">{{ partial "icons-theme/object-select-icon.svg" }}</div>
+	<div class="icon-theme" id="icon_branding">{{ partial "icons-theme/branding-logo-design-icon.svg" }}</div>
+
+	
+
+
+{{ end }}

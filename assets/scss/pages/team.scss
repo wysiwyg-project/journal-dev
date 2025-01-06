@@ -1,0 +1,17 @@
+.page-member__container{
+    h1{
+        margin-bottom: 0;
+    }
+
+    .content{
+        margin-top: calc(var(--baseline)*2);
+    }
+
+    .website{
+        margin-top: calc(var(--baseline)*1);
+
+        a{
+            @include link();
+        }
+    }
+}

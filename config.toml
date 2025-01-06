@@ -1,0 +1,66 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+defaultContentLanguage = 'en'
+title = "WYSIWYG"
+baseline = "An Investigation in the updake of graphic design software in Switzerland and France, 1880 - today"
+
+[params]
+# -- Socials -----------------------------
+# available: facebook, github, gitlab, instagram, linkedin, medium, twitter, youtube
+# icons localisation: layouts/partials/ svg
+[params.socials]
+  instagram = "https://www.instagram.com/votrepager"
+  facebook = "https://www.facebook.com/votrepage"
+
+# -- MENU -----------------------------
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    identifier = "about"
+    weight = 1
+  [[menu.main]]
+    name = "Journal"
+    url = "/journal/"
+    identifier = "journal"
+    weight = 2
+  [[menu.main]]
+    name = "Team"
+    url = "/team/"
+    weight = 3
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    identifier = "publications"
+    weight = 4
+  [[menu.main]]
+    name = "Bibliography"
+    url = "/bibliography/"
+    identifier = "bibliography"
+    weight = 5
+
+
+# -- MULTILANGUAGE -----------------------------
+[languages]
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      dateFormat = "January 02, 2006"
+  
+  [languages.fr]
+    languageCode = "fr"
+    languageName = "Français"
+    weight = 2
+    [languages.fr.params]
+      dateFormat = "02 janvier 2006"
+  
+# Don’t work
+enableGitInfo = true
+
+[frontmatter]
+  date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified']
+  expiryDate = ['expirydate', 'unpublishdate']
+  lastmod = [':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+  publishDate = ['publishdate', 'pubdate', 'published', 'date']

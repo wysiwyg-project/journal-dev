@@ -1,0 +1,143 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased
+    // border: 1px solid var(--color);
+}
+
+
+body{
+    font-family: var(--font);
+    font-size: var(--font-size);
+    line-height: var(--baseline);
+    --weight: 500;
+    font-weight: var(--weight);
+    color: var(--black);
+
+}
+
+
+
+main{
+    padding-bottom: 30vh;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+
+@mixin underline(){
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+}
+
+@mixin link(){
+    @include underline();
+    cursor: pointer;
+    &:hover{
+        color: var(--accent);
+    }
+}
+
+
+@mixin link-text(){
+    @include underline();
+    cursor: pointer;
+    &:hover{
+        color: var(--accent);
+    }
+}
+
+@mixin lang(){
+    &::before{ content: "["; }
+    &::after{ content: "]"; }
+}
+
+@mixin img-border(){
+    --img-border: var(--black);
+    filter:
+    drop-shadow(0 -2px 0 var(--img-border))
+    drop-shadow(0 2px 0 var(--img-border))
+    drop-shadow(-2px 0 0 var(--img-border))
+    drop-shadow(2px 0 0 var(--img-border));
+}
+            
+
+@mixin button-text(){
+    background: none;
+    font-family: var(--font);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    line-height: calc(var(--baseline)*0.75);
+    border: none;
+    
+
+    display: inline-block;
+    box-shadow: 0px 0px 0px 1.5px currentColor;
+    height: calc(var(--button-size)*0.75);
+    border-radius: calc(var(--button-size)*0.75/2);
+    padding: 0ch 1ch;
+
+    a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+
+@mixin button($color, $bg){
+
+    border: none;
+    background: none;
+    color: $color;
+    position: relative;
+    height: var(--button-size);
+    min-width: var(--button-size);
+    border-radius: calc(var(--button-size)*0.5);
+
+    display: flex;
+    align-items: center;
+
+    a{ padding: 0 1ch; }
+
+    &::before{
+        content: '';
+        inset: 1px;
+        border: 1px solid $color;
+        border-radius: calc(var(--button-size)*0.5);
+        position: absolute;
+        z-index: -1;
+        background: $bg;
+    }
+    svg{
+        width: calc(var(--button-size)*0.45);
+        fill: $color;
+    }
+    &.active{
+        color: $bg;
+        &::before{
+            background-color: $color;
+            border-color: $color;
+        }
+        cursor: auto; 
+    }
+    &:hover{
+        cursor: pointer;
+        &::before{
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+        color: $bg!important;
+
+    }
+  
+}

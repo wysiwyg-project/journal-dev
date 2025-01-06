@@ -1,0 +1,22 @@
+<nav class="breadcrumbs">
+    <ul>
+        {{- range .Ancestors.Reverse }}
+            {{ if eq .Title "Projects" }}
+                <li><a href="{{ .RelPermalink }}">{{ i18n "section.projects" }}</a></li>
+            {{ else if eq .Title "Posts" }}
+                <li><a href="{{ .RelPermalink }}">{{ i18n "section.posts" }}</a></li>
+            {{ else if eq .Title "Teams" }}
+                <li><a href="{{ .RelPermalink }}">{{ i18n "section.team" }}</a></li>
+            {{ else }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+            
+        {{- end }}
+
+    </ul>
+</nav>
+
+
+
+
+

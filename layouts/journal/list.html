@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+
+	<section class="list-posts">
+
+
+		<header class="page-title {{ .Type }}__header">
+			<h1>{{ i18n "section.journal" }}</h1>
+		</header>
+	
+		
+
+		{{ $allPosts := slice }}
+		{{ range site.Home.AllTranslations }}
+			{{ with .Site.GetPage "section" "journal" }}
+				{{ $allPosts = $allPosts | append .Pages }}
+			{{ end }}
+		{{ end }}
+
+		{{ $sortedPosts := sort $allPosts "Date" "desc" }}
+		<div class="list-posts__container">
+			{{ range $sortedPosts }}
+			<article class="list-posts__item">
+				<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+
+				<div class="details">
+					<p class="lang">{{ .Lang }}</p>
+					<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+						{{ .Date.Format "02-01-2006" }}
+					</time>
+				</div>
+				
+				<div class="summary">
+					<!-- {{ .Summary }} -->
+					{{ .Content | truncate 400 }}
+				</div>
+				<button><a href="{{ .Permalink }}">{{ i18n "buttons.read_more" }}</a></button>
+			</article>
+			{{ end }}
+		</div>
+	</section>
+
+
+
+{{ end }}
