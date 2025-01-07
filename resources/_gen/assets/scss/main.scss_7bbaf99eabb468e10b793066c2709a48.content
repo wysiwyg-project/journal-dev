@@ -48,7 +48,8 @@
   --dp-4: #ff6a54;
   --dp-5: #fd9452;
   --dp-6: rgb(228, 185, 118);
-  --dp-7: rgb(8, 93, 221); }
+  --dp-7: rgb(8, 93, 221);
+  --color-icon: #6573dd; }
 
 * {
   padding: 0px;
@@ -72,6 +73,27 @@ main {
 a {
   text-decoration: none;
   color: currentColor; }
+
+.draggable:hover, #element:hover {
+  --drag: #6573dd;
+  box-shadow: 0px 0px 0px 2px var(--drag);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  cursor: move; }
+  .draggable:hover::before, .draggable:hover::after, #element:hover::before, #element:hover::after {
+    content: "◼ ◼";
+    display: block;
+    width: calc(100% + 20px);
+    position: absolute;
+    left: -10px;
+    color: var(--drag);
+    font-size: 20px;
+    text-align-last: justify; }
+  .draggable:hover::before, #element:hover::before {
+    top: -24px; }
+  .draggable:hover::after, #element:hover::after {
+    bottom: -26px; }
 
 body {
   background-color: var(--yellow-bg);
@@ -202,15 +224,35 @@ body.show-grid {
 #grid-item-12 {
   grid-column: 12; }
 
-#site-header h1 {
-  font-family: var(--chicago);
-  font-weight: normal;
-  font-size: var(--font-size-big);
-  position: absolute;
-  top: 15px; }
-
-#site-header a:hover {
-  color: var(--accent); }
+#site-header {
+  display: flex;
+  justify-content: flex-start; }
+  #site-header h1 {
+    font-family: var(--chicago);
+    font-weight: normal;
+    font-size: var(--font-size-big);
+    position: relative;
+    top: 15px; }
+  #site-header a:hover {
+    color: var(--accent); }
+  #site-header .icon-title {
+    position: relative;
+    top: 12px;
+    --size: calc(var(--baseline)*1.25);
+    margin-left: 0.5ch;
+    border: 2px solid var(--black);
+    background-color: var(--yellow-bg);
+    height: var(--size);
+    width: var(--size);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #site-header .icon-title svg {
+      width: 75%;
+      fill: var(--black); }
+    #site-header .icon-title:first-of-type {
+      margin-left: 1.5ch; }
 
 #menu ul {
   height: 100%;
@@ -482,7 +524,8 @@ span {
   line-height: calc(var(--baseline)*2);
   max-width: 22ch;
   position: relative;
-  top: 6px; }
+  top: 6px;
+  margin-top: calc(var(--baseline)*2); }
 
 .page-home .details {
   margin-left: calc(var(--grid-unit) + var(--gap));

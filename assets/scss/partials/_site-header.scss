@@ -1,12 +1,15 @@
 #site-header{
 
+    display: flex;
+    justify-content: flex-start;
+
 
 
         h1{
             font-family: var(--chicago);
             font-weight: normal;
             font-size: var(--font-size-big);
-            position: absolute;
+            position: relative;
             top: 15px;
         }
 
@@ -15,6 +18,34 @@
             color: var(--accent);
          
         }
+
+
+        .icon-title{
+            position: relative;
+            top: 12px;
+            --size: calc(var(--baseline)*1.25);
+
+            margin-left: 0.5ch;
+            border: 2px solid var(--black);
+            background-color: var(--yellow-bg);
+            height: var(--size);
+            width: var(--size);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                width: 75%;
+                fill: var(--black);
+            }
+
+            &:first-of-type{
+                margin-left: 1.5ch;
+            }
+        }
+
+        // #header_text-size { background-color: var(--dp-1) }
+        // #header_object-select { background-color: var(--dp-4) }
 
 }
 

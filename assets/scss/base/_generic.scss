@@ -141,3 +141,33 @@ a{
     }
   
 }
+
+
+.draggable:hover, #element:hover{
+    --drag: #6573dd;
+    box-shadow: 0px 0px 0px 2px var(--drag);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    cursor: move;
+
+    &::before, &::after{
+        content: "◼ ◼";
+        display: block;
+        width: calc(100% + 20px);
+        position: absolute;
+        left: -10px;
+      
+        color: var(--drag);
+        font-size: 20px;
+        text-align-last: justify;
+    }
+
+    &::before{
+        top: -24px;
+    }
+
+    &::after{
+        bottom: -26px;
+    }
+}
