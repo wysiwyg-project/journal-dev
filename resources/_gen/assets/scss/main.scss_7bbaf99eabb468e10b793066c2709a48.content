@@ -7,7 +7,6 @@
   --border-layout: 1px solid black;
   --padding: 24px;
   --chicago: 'ChicagoFLF';
-  --arrow: "➾";
   --arrow: "➤";
   --list: square;
   --font: 'FK Grotesk Neue', Helvetica, Arial, sans-serif;
