@@ -74,14 +74,16 @@ a {
   text-decoration: none;
   color: currentColor; }
 
-.draggable:hover, #element:hover {
-  --drag: #6573dd;
-  box-shadow: 0px 0px 0px 2px var(--drag);
+.draggable {
   position: relative;
   top: 0px;
-  left: 0px;
+  left: 0px; }
+
+.draggable:hover {
+  --drag: #6573dd;
+  box-shadow: 0px 0px 0px 2px var(--drag);
   cursor: move; }
-  .draggable:hover::before, .draggable:hover::after, #element:hover::before, #element:hover::after {
+  .draggable:hover::before, .draggable:hover::after {
     content: "◼ ◼";
     display: block;
     width: calc(100% + 20px);
@@ -89,11 +91,12 @@ a {
     left: -10px;
     color: var(--drag);
     font-size: 20px;
+    line-height: 20px;
     text-align-last: justify; }
-  .draggable:hover::before, #element:hover::before {
-    top: -24px; }
-  .draggable:hover::after, #element:hover::after {
-    bottom: -26px; }
+  .draggable:hover::before {
+    top: -10px; }
+  .draggable:hover::after {
+    bottom: -12px; }
 
 body {
   background-color: var(--yellow-bg);
