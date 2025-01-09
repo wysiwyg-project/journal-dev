@@ -1,8 +1,5 @@
 body{
-    --box: transparent;
-    --baseline-grid:  transparent;
-    --grid-color: transparent;
-    --grid-paper: #e4dfd0;
+  
 }
 
 body.show-grid{
@@ -45,6 +42,7 @@ body.show-grid{
     // background-size:  calc(var(--baseline)/2) calc(var(--baseline)/2);
     background-size: var(--w-unit) var(--baseline);
     background-position: 22px -7px!important;
+    opacity: 0.2;
 
 }
 

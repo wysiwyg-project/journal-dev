@@ -5,11 +5,25 @@ window.onload = function() {
     // toggleMenu();
     toggleGrid(body);
 
-    draggable(body);
+    toggleColors(body);
+
+    // draggable(body);
 
 
 };
 
+
+function toggleColors(body){
+    let buttons = document.querySelectorAll("#buttons-color button");
+    buttons.forEach(function (button, index) {
+        button.addEventListener('click', function() {
+            let color = button.getAttribute('data-color');
+            console.log(color);
+            body.style.setProperty('--yellow-bg', color);
+        });
+    
+    });
+}
 
 function toggleGrid(body){
     const gridToggleButton = document.getElementById('grid-switcher');
