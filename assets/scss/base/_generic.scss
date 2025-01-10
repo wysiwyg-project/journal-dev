@@ -96,6 +96,8 @@ a{
 
 @mixin button($color, $bg){
 
+
+
     border: none;
     background: none;
     color: $color;
@@ -103,21 +105,14 @@ a{
     height: var(--button-size);
     min-width: var(--button-size);
     border-radius: calc(var(--button-size)*0.5);
+    background-color: var(--black);
 
     display: flex;
     align-items: center;
 
     a{ padding: 0 1ch; }
 
-    &::before{
-        content: '';
-        inset: 1px;
-        border: 1px solid $color;
-        border-radius: calc(var(--button-size)*0.5);
-        position: absolute;
-        z-index: -1;
-        background: $bg;
-    }
+
     svg{
         width: calc(var(--button-size)*0.45);
         fill: $color;
@@ -132,11 +127,9 @@ a{
     }
     &:hover{
         cursor: pointer;
-        &::before{
-            background-color: var(--accent);
-            border-color: var(--accent);
-        }
-        color: $bg!important;
+        background-color: var(--accent);
+        color: var(--black)!important;
+        svg{ fill: var(--black); }
 
     }
   
