@@ -143,36 +143,36 @@ a{
 }
 
 
-// .draggable{
-//     position: relative;
-//     top: 0px;
-//     left: 0px;
-// }
+ .draggable{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
 
-// .draggable:hover{
-//     --drag: #6573dd;
-//     box-shadow: 0px 0px 0px 2px var(--drag);
+#toggle-move-checkbox:checked ~ main .draggable:hover{
+    --drag: var(--accent);
+    box-shadow: 0px 0px 0px 2px var(--drag);
 
-//     cursor: move;
+    cursor: move;
 
-//     &::before, &::after{
-//         content: "◼ ◼";
-//         display: block;
-//         width: calc(100% + 20px);
-//         position: absolute;
-//         left: -10px;
+    // &::before, &::after{
+    //     content: "◼ ◼";
+    //     display: block;
+    //     width: calc(100% + 20px);
+    //     position: absolute;
+    //     left: -10px;
       
-//         color: var(--drag);
-//         font-size: 20px;
-//         line-height: 20px;
-//         text-align-last: justify;
-//     }
+    //     color: var(--drag);
+    //     font-size: 20px;
+    //     line-height: 20px;
+    //     text-align-last: justify;
+    // }
 
-//     &::before{
-//         top: -10px;
-//     }
+    &::before{
+        top: -10px;
+    }
 
-//     &::after{
-//         bottom: -12px;
-//     }
-// }
+    &::after{
+        bottom: -12px;
+    }
+}

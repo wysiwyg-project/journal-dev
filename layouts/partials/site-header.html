@@ -1,15 +1,22 @@
+
+<input type="checkbox" id="grid-switcher-checkbox" aria-hidden="true" style="display: none;" checked/>
+<input type="checkbox" id="toggle-palette-checkbox" aria-hidden="true" style="display: none;" />
+<input type="checkbox" id="toggle-move-checkbox" aria-hidden="true" style="display: none;" />
+
 <header id="site-header">
 
 	
 
 
 	<h1><a href="/">{{ i18n "site.title" }}</a> </h1>
-	<div class="icon-title" id="grid-switcher">{{ partial "icons-theme/grid-pixel.svg" }}</div>
+
+
+	<!-- GRID -->
+	<label class="icon-title" id="grid-switcher" for="grid-switcher-checkbox" aria-hidden="true">{{ partial "icons-theme/grid-pixel.svg" }}</label>
 
 	<!-- PALETTE -->
-	<input type="checkbox" id="toggle-palette-checkbox"/>
-	<label class="icon-title" for="toggle-palette-checkbox" id="toggle-palette">{{ partial "icons-theme/palette.svg" }}</label>
-	<ul id="buttons-color">
+	<label class="icon-title" for="toggle-palette-checkbox" id="toggle-palette" aria-hidden="true">{{ partial "icons-theme/palette.svg" }}</label>
+	<ul id="buttons-color" aria-hidden="true">
 		<li><button id="color-1" data-color="var(--color-bg-1)"></button></li>
 		<li><button id="color-2" data-color="var(--color-bg-2)"></button></li>
 		<li><button id="color-3" data-color="var(--color-bg-3)"></button></li>
@@ -17,19 +24,10 @@
 		<li><button id="color-5" data-color="var(--color-bg-5)"></button></li>
 	</ul>
 
-	<div class="icon-title" id="toggle-move">{{ partial "icons-theme/cursor-hand.svg" }}</div>
+	<!-- MOVE -->
+	<label class="icon-title" for="toggle-move-checkbox" id="toggle-move" aria-hidden="true">{{ partial "icons-theme/cursor-hand.svg" }}</dlabel>
 
 
-
-
-		<!-- {{ if eq .Type "posts" }}
-			<h2><a href="{{ if eq .Lang "fr" }}/{{ .Lang }}{{ end }}/posts/">{{ i18n "section.posts" }}</a></h2>
-		{{ else if eq .Type "team" }}
-			<h2><a href="{{ if eq .Lang "fr" }}/{{ .Lang }}{{ end }}/posts/">{{ i18n "section.team" }}</a></h2>
-		{{ else if not .IsHome }}
-			<h2>{{ .Title }}</h2>
-		{{ end }} -->
-		
 
 
 

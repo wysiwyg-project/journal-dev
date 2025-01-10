@@ -1,25 +1,3 @@
-body{
-  
-}
-
-body.show-grid{
-    // --grid-color: red;
-    --grid-paper: transparent;
-   
-}
-#baseline-grid{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    background-size: var(--baseline) var(--baseline);
-    background-position: 0px 14px;
-    background-image:  repeating-linear-gradient(0deg, var(--baseline-grid), var(--baseline-grid) 1px, transparent 1px, transparent);
-}
-
 #grid-paper, #baseline-grid, #grid-paper-inside{
     width: 100vw;
     height: 100vh;
@@ -28,6 +6,11 @@ body.show-grid{
     left: 0;
     z-index: -1;
 }
+
+
+#grid-paper{ display: none; }
+
+#grid-switcher-checkbox:checked ~ #grid-paper{ display: block!important; }
 
 
 #site-header, #menu, main{

@@ -51,3 +51,18 @@
 
 }
 
+
+#toggle-move-checkbox:checked ~ #site-header #toggle-move,
+#grid-switcher-checkbox:checked ~ #site-header #grid-switcher{
+    background-color: var(--black);
+    svg {
+        fill: var(--color-bg);
+    }
+    &:hover{
+        background-color: var(--accent);
+        svg {
+            fill: var(--black);
+        }
+    }
+}
+
