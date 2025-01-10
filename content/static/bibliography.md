@@ -5,6 +5,9 @@ type: static
 url: bibliography
 ---
 
+
+# Articles
+
 Adebiaye, Frank (2014). *La commande de design graphique*. Paris: CNAP.
 
 Alberts, Gerard and Oldenziel, Ruth (eds.) (2014). *Hacking Europe. From Computer Cultures to Demospheres*, Berlin: Springer. 
@@ -16,6 +19,11 @@ André, Jacques (dir.) (2016), *Histoire de l’écriture typographique*, Le XXe
 Apeloig, Philippe (2013), Philippe Apeloig, Design Graphique. Exh. Cat. Paris: Musée des Arts Décoratifs.
 
 André, Jacques and Hersch, Roger (1991). *Raster Imaging and Digital Typography.* Proceedings of the International Workshop, Lausanne, 1989. Crambridge University Press.  
+
+
+# Livres
+
+
 
 Bardini, Thierry (2006), The social construction of the personal computer user, *Journal of Communication*, 45, 3, p. 40-66.
 

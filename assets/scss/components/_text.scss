@@ -23,16 +23,15 @@
 }
 
 
-.content{
 
+
+
+@mixin text(){
     max-width: 52ch;
 
     
     a{
-        @include link-text();
-        // text-decoration: underline dotted;
-        
-       
+        @include link-text();       
     }
 
 
@@ -56,7 +55,7 @@
 
         &::before{
             content: var(--arrow) " ";
-            font-size: var(--font-size-arrow);
+            // font-size: var(--font-size-arrow);
             position: absolute;
             left: 0;
         }
@@ -96,5 +95,11 @@
     figure + figure{
         margin-top: calc(var(--baseline)*-0.5);
     }
-    
+}
+
+
+
+.content{
+    @include text();
+
 }

@@ -21,16 +21,18 @@
       color: var(--accent);
       &::before{
         position: absolute;
-        left: -1.5ch;
-        content: var(--arrow) " "
+        left: -34px;
+        content: var(--arrow) " ";
+        font-size: var(--font-size-arrow);
       }
     }
     &.active{
-      text-indent: 1.5ch;
+      text-indent: 34px;
       &::before{
         position: absolute;
-        left: -1.5ch;
-        content: var(--arrow) " "
+        left: -34px;
+        content: var(--arrow) " ";
+        font-size: var(--font-size-arrow);
       }
      
     }

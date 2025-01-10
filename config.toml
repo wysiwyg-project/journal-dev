@@ -29,11 +29,6 @@ baseline = "An Investigation in the updake of graphic design software in Switzer
     url = "/team/"
     weight = 3
   [[menu.main]]
-    name = "Publications"
-    url = "/publications/"
-    identifier = "publications"
-    weight = 4
-  [[menu.main]]
     name = "Bibliography"
     url = "/bibliography/"
     identifier = "bibliography"

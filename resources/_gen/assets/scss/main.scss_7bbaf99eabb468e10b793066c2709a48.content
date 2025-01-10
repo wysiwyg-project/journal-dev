@@ -12,7 +12,7 @@
   --font: 'FK Grotesk Neue', Helvetica, Arial, sans-serif;
   --font-size: 18px;
   --baseline: 24px;
-  --font-size-arrow: 28px;
+  --font-size-arrow: 24px;
   --font-size-big: 38px;
   --font-size-small: 13px;
   --button-size-original: 34px;
@@ -220,8 +220,6 @@ body.show-grid {
     font-size: var(--font-size-big);
     position: relative;
     top: 15px; }
-  #site-header a:hover {
-    color: var(--accent); }
   #site-header .icon-title {
     position: relative;
     top: 12px;
@@ -258,14 +256,16 @@ body.show-grid {
     color: var(--accent); }
     #menu li:hover::before {
       position: absolute;
-      left: -1.5ch;
-      content: var(--arrow) " "; }
+      left: -34px;
+      content: var(--arrow) " ";
+      font-size: var(--font-size-arrow); }
   #menu li.active {
-    text-indent: 1.5ch; }
+    text-indent: 34px; }
     #menu li.active::before {
       position: absolute;
-      left: -1.5ch;
-      content: var(--arrow) " "; }
+      left: -34px;
+      content: var(--arrow) " ";
+      font-size: var(--font-size-arrow); }
 
 span {
   transition: all 0.2s linear 0s; }
@@ -484,7 +484,6 @@ span {
     font-size: var(--font-size); }
     .content h1::before, .content h2::before {
       content: var(--arrow) " ";
-      font-size: var(--font-size-arrow);
       position: absolute;
       left: 0; }
   .content figure {
@@ -692,12 +691,12 @@ span {
   margin-top: calc(var(--baseline)*3); }
 
 body[data-name*="bibliography"] .content p {
-  margin-bottom: var(--baseline);
-  margin-left: 2ch; }
-  body[data-name*="bibliography"] .content p::before {
-    content: var(--arrow);
-    position: absolute;
-    left: 0ch; }
+  margin-bottom: var(--baseline); }
+
+body[data-name*="bibliography"] .content h1, body[data-name*="bibliography"] .content h2 {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px; }
 
 body[data-name*="publications"] .content p {
   margin-top: calc(var(--baseline)*1.5);
