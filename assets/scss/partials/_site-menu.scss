@@ -75,7 +75,7 @@ span {
 
 #menu-toggle{  
   
-    @include button(var(--yellow-bg), var(--black));
+    @include button(var(--color-bg), var(--black));
     --button-size: calc(var(--button-size-original) + 2px);
 
     display: flex;
@@ -84,7 +84,7 @@ span {
   
     display: none;
 
-    --color: var(--yellow-bg);
+    --color: var(--color-bg);
     --size: 14px;
     --height: 2px;
     cursor: pointer;

@@ -19,7 +19,7 @@ function toggleColors(body){
         button.addEventListener('click', function() {
             let color = button.getAttribute('data-color');
             console.log(color);
-            body.style.setProperty('--yellow-bg', color);
+            body.style.setProperty('--color-bg', color);
         });
     
     });
