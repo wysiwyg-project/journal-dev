@@ -27,7 +27,35 @@
     button{
         @include button(var(--color-bg), var(--black));
         --button-size: calc(var(--button-size-original) + 2px);
+
+
+        label{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{ cursor: pointer; }
+        }
     }
 
+
+
+    #contact-mail{
+        border: 2px solid var(--black);
+        height: var(--button-size-original);
+        border-radius: calc(var(--button-size-original)*0.5);
+        padding: 2px 2ch;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        background-color: var(--color-bg);
+        position: absolute;
+        margin-top: calc(var(--button-size-original)*-1);
+        left: -24ch;
+        display: none;
+    }
+
+    #mail-checkbox:checked ~ #contact-mail{ display: block; }
 
 }

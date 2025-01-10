@@ -1,11 +1,16 @@
 	<aside id="aside-buttons">
 
-		<!-- <button id="toggle-theme">{{ partial "icons/dark-theme.svg" }}</button> -->
 		<button id="language-switcher">
 			{{ if eq .Lang "fr" }}<a href="/en">en</a>{{ end }}
 			{{ if eq .Lang "en" }}<a href="/fr">fr</a>{{ end }}
 		</button>
-      
+
 
         <button id="instagram"><a href="https://www.instagram.com/wysiwygproject/" target="_blank">{{ partial "icons/instagram.svg" }}</a></button>
+
+		
+		<input type="checkbox" id="mail-checkbox" aria-hidden="true" style="display: none;" />
+		<button id="toggle-contact"><label for="mail-checkbox">{{ partial "icons/contact.svg" }}</label></button>
+
+		<div id="contact-mail"><p>clemence.imbert@hesge.ch</p></div>
 	</aside>

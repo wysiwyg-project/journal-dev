@@ -65,4 +65,5 @@ main{
     position: fixed;
     bottom: calc(var(--padding) + 6px);
     right: var(--padding);
+    z-index: 100;
 }
