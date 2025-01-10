@@ -4,9 +4,24 @@
 
 
 	<h1><a href="/">{{ i18n "site.title" }}</a> </h1>
-	<div class="icon-title" id="header_draw-curve">{{ partial "icons-theme/draw-curve-icon.svg" }}</div>
-	<div class="icon-title" id="header_text-size">{{ partial "icons-theme/text-size.svg" }}</div>
-	<div class="icon-title" id="header_object-select">{{ partial "icons-theme/object-select-icon.svg" }}</div>
+	<div class="icon-title" id="grid-switcher">{{ partial "icons-theme/grid-pixel.svg" }}</div>
+
+	<!-- PALETTE -->
+	<input type="checkbox" id="toggle-palette-checkbox"/>
+	<label class="icon-title" for="toggle-palette-checkbox" id="toggle-palette">{{ partial "icons-theme/palette.svg" }}</label>
+	<ul id="buttons-color">
+		<li><button id="color-1" data-color="var(--color-bg-1)"></button></li>
+		<li><button id="color-2" data-color="var(--color-bg-2)"></button></li>
+		<li><button id="color-3" data-color="var(--color-bg-3)"></button></li>
+		<li><button id="color-4" data-color="var(--color-bg-4)"></button></li>
+		<li><button id="color-5" data-color="var(--color-bg-5)"></button></li>
+	</ul>
+
+	<div class="icon-title" id="toggle-move">{{ partial "icons-theme/cursor-hand.svg" }}</div>
+
+
+
+
 		<!-- {{ if eq .Type "posts" }}
 			<h2><a href="{{ if eq .Lang "fr" }}/{{ .Lang }}{{ end }}/posts/">{{ i18n "section.posts" }}</a></h2>
 		{{ else if eq .Type "team" }}

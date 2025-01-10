@@ -11,6 +11,7 @@
             font-size: var(--font-size-big);
             position: relative;
             top: 15px;
+            margin-right: 0.75ch;
         }
 
        
@@ -23,24 +24,28 @@
         .icon-title{
             position: relative;
             top: 12px;
-            --size: calc(var(--baseline)*1.25);
+            --size: var(--icons-size);
+            z-index: 100;
 
             margin-left: 0.5ch;
             border: 2px solid var(--black);
             background-color: var(--color-bg);
             height: var(--size);
             width: var(--size);
-            border-radius: 5px;
+            border-radius: var(--icons-radius);
             display: flex;
             align-items: center;
             justify-content: center;
+
+            cursor: pointer;
             svg{
                 width: 75%;
                 fill: var(--black);
             }
 
-            &:first-of-type{
-                margin-left: 1.5ch;
+        
+            &:hover{
+                background-color: var(--accent);
             }
         }
 

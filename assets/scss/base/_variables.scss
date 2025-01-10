@@ -25,10 +25,14 @@
     --font-size-big: 38px;
     --font-size-small: 13px;
 
+
     --button-size-original: 34px;
     --button-size: var(--button-size-original);
     --header: var(--button-size);
     --button-margin: 2px;
+
+    --icons-size: calc(var(--baseline)*1.25);
+    --icons-radius: 5px;
   
 
 
