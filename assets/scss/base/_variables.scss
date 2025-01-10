@@ -38,14 +38,13 @@
 
     --color-bg-1: #31a8f7;
     --color-bg-2: rgb(198, 196, 197);
-    --color-bg-3: #ffdc50;
+    --color-bg-3: #edcc48;
     --color-bg-4: #00df68;
     --color-bg-5: #ff5518;
     --color-h: 14px;
 
 
     --black: #1a1a1a;
-    --color-bg: #fffeed;
     --accent: #ea4b32;
     --box: transparent;
     --baseline-grid:  transparent;
@@ -58,5 +57,11 @@
     --grid-paper: white;
     
 }
+
+[data-color="var(--color-bg-1)"]{ --color-bg: var(--color-bg-1); }
+[data-color="var(--color-bg-2)"]{ --color-bg: var(--color-bg-2); }
+[data-color="var(--color-bg-3)"]{ --color-bg: var(--color-bg-3); }
+[data-color="var(--color-bg-4)"]{ --color-bg: var(--color-bg-4); }
+[data-color="var(--color-bg-5)"]{ --color-bg: var(--color-bg-5); }
 
 
