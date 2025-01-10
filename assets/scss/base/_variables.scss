@@ -7,8 +7,9 @@
  
 
     --chicago: 'ChicagoFLF';
-    --arrow: "➾";
+    // --arrow: "➯";
     --arrow: "➤";
+    // --arrow: "✿";
     // --arrow: "➞";
     // --arrow: "✎";
 
@@ -29,16 +30,31 @@
     --header: var(--button-size);
     --button-margin: 2px;
   
-    --black: #1a1a1a;
-    // --black: rgb(75, 45, 196);
 
-    --white: #f8f8f8;
-    --white: white;
+
+    --color-bg-1: #31a8f7;
+    --color-bg-2: rgb(198, 196, 197);
+    --color-bg-3: #ffdc50;
+    --color-bg-4: #00df68;
+    --color-bg-5: #ff5518;
+    --color-h: 14px;
+
+
+    --black: #1a1a1a;
     --yellow-bg: #fffeed;
-    // --yellow-bg: violet;
-    // --yellow-bg: rgb(228, 185, 118);
     --accent: #ea4b32;
-    // --accent: #6573dd;
+    --box: transparent;
+    --baseline-grid:  transparent;
+    --grid-color: transparent;
+
+
+    --black: #1a1a1a;
+    --yellow-bg: var(--color-bg-5);
+    --accent: white;
+    --grid-paper: white;
+    
+  
+
 
     --color-1a: rgb(203, 157, 162);
     --color-1b: rgb(92, 37, 41);
@@ -74,5 +90,12 @@
     // --color-icon: var(--accent);
 
 
+ 
+
 }
 
+
+
+body{
+    --yellow-bg: var(--color-bg-2);
+}
