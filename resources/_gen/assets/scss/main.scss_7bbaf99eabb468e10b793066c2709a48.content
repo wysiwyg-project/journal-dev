@@ -435,6 +435,18 @@ span {
     #aside-buttons button label:hover {
       cursor: pointer; }
 
+#aside-buttons button.disable {
+  opacity: 0.5;
+  cursor: auto !important; }
+  #aside-buttons button.disable label {
+    cursor: auto !important; }
+  #aside-buttons button.disable a {
+    cursor: auto !important; }
+  #aside-buttons button.disable:hover {
+    background-color: var(--black); }
+    #aside-buttons button.disable:hover a {
+      color: var(--color-bg); }
+
 #aside-buttons #contact-mail {
   border: 2px solid var(--black);
   height: var(--button-size);

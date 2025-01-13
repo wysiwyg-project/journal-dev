@@ -23,7 +23,6 @@
     }
 
 
-
     button{
         @include button(var(--color-bg), var(--black));
         margin-bottom: 3px;
@@ -35,6 +34,17 @@
             align-items: center;
             justify-content: center;
             &:hover{ cursor: pointer; }
+        }
+    }
+
+    button.disable{
+        opacity: 0.5;
+        cursor: auto!important;
+        label{ cursor: auto!important; }
+        a{ cursor: auto!important; }
+        &:hover{
+            background-color: var(--black);
+            a{ color: var(--color-bg); }
         }
     }
 
