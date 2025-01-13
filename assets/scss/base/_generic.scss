@@ -31,6 +31,17 @@ a{
 }
 
 
+$medium: "screen and (max-width: 960px)";
+
+// @media #{$medium}{
+//     :root{
+     
+//     }
+ 
+// }
+
+
+
 @mixin underline(){
     text-decoration: underline;
     text-underline-offset: 2px;

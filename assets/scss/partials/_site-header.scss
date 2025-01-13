@@ -2,6 +2,7 @@
 
     display: flex;
     justify-content: flex-start;
+    z-index: 100;
 
 
 
@@ -66,3 +67,12 @@ body[data-grid="true"] #site-header #grid-switcher{
     }
 }
 
+
+
+
+
+@media #{$medium}{
+
+  
+   
+}

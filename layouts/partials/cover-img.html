@@ -1,6 +1,0 @@
-{{ if .Params.cover.image }}
-<div class="cover-image">
-	<img src="{{ .Params.cover.image | absURL }}" 
-		alt="{{ .Params.cover.alt | default .Title }}">
-</div>
-{{ end }}
