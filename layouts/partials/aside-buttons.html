@@ -1,8 +1,8 @@
 	<aside id="aside-buttons">
 
 		<button id="language-switcher">
-			{{ if eq .Lang "fr" }}<a href="/en">en</a>{{ end }}
-			{{ if eq .Lang "en" }}<a href="/fr">fr</a>{{ end }}
+			{{ if eq .Lang "fr" }}<a data-lang="en" href="/en">en</a>{{ end }}
+			{{ if eq .Lang "en" }}<a data-lang="fr" href="/fr">fr</a>{{ end }}
 		</button>
 
 

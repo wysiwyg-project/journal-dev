@@ -33,13 +33,6 @@
 <body class="page-{{ $pageType }}" data-name="{{ with .File }}{{ .BaseFileName }}{{ else }}default{{ end }}" data-color="var(--color-bg-2)" data-grid="true">
 	
 
-	<!-- <div id="buttons-color">
-		<button id="color-1" data-color="var(--color-bg-1)"></button>
-		<button id="color-2" data-color="var(--color-bg-2)"></button>
-		<button id="color-3" data-color="var(--color-bg-3)"></button>
-		<button id="color-4" data-color="var(--color-bg-4)"></button>
-		<button id="color-5" data-color="var(--color-bg-5)"></button>
-	</div> -->
 	{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
 
 	<button id="menu-toggle" aria-label="Open menu"><span></span></button>
@@ -50,13 +43,7 @@
 			
 	
 	<main role="main">
-
-		<!-- {{ if ne .Kind "home" }}
-			{{ partial "breadcrumbs.html" . }}
-		{{ end }} -->
-
 		{{ block "main" . }}{{ end }}
-
 	</main>
 	
 	<div id="grid-paper" aria-hidden="true"><div id="grid-paper-inside"></div></div>

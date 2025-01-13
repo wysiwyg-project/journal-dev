@@ -4,14 +4,49 @@ document.addEventListener("DOMContentLoaded", function() {
     const body = document.querySelector("body");
     // toggleMenu();
 
-
+    chargeLangLink(body);
     toggleColors(body);
     toggleGrid(body);
-
     draggable(body);
 
 
+
 });
+
+
+function chargeLangLink(body){
+    let buttonSwitcher = body.querySelector("#language-switcher")
+    let linkElem = buttonSwitcher.querySelector("a");
+    let lang = linkElem.getAttribute('data-lang');
+
+    let path = window.location.pathname;
+    path = path.replace("/fr/", "/");
+
+    if(lang == 'fr'){
+        linkElem.href = '/fr' + path;
+    }else{
+        linkElem.href = path;
+    }
+
+    // Journal post exception
+    if (path.startsWith("/journal/") && path.length > 9) {
+        let i18n = body.querySelector("#i18n a");
+        if(i18n){
+            linkElem.href = i18n.href;
+        }else{
+            linkElem.href = '';
+            buttonSwitcher.classList.add('disable');
+    
+            buttonSwitcher.addEventListener("click", function(event) {
+                event.preventDefault(); 
+            });
+        }
+
+    }
+
+
+}
+
 
 function toggleGrid(body) {
     let toggleButton = body.querySelector('#grid-switcher');
@@ -41,7 +76,6 @@ function toggleColors(body){
     if (savedColor) {
         body.setAttribute('data-color', savedColor);
     }
-    console.log(savedColor);
 
     buttons.forEach(function (button, index) {
         button.addEventListener('click', function() {
