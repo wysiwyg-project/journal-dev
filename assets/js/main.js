@@ -1,26 +1,54 @@
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
 
     const body = document.querySelector("body");
     // toggleMenu();
 
 
     toggleColors(body);
+    toggleGrid(body);
 
     draggable(body);
 
 
-};
+});
+
+function toggleGrid(body) {
+    let toggleButton = body.querySelector('#grid-switcher');
+
+    let savedGrid = localStorage.getItem('grid');
+    if (savedGrid) {
+        body.setAttribute('data-grid', savedGrid);
+    }
+
+    toggleButton.addEventListener('click', function () {
+        let currentGridState = body.getAttribute('data-grid') === "true";
+        
+        let newGridState = !currentGridState;
+        localStorage.setItem('grid', newGridState);
+        body.setAttribute('data-grid', newGridState);
+        
+    });
+}
+
 
 
 function toggleColors(body){
-    let buttons = document.querySelectorAll("#buttons-color button");
+    let buttons = body.querySelectorAll("#buttons-color button");
+    let toggleButton = body.querySelector('#toggle-palette-checkbox');
+
+    let savedColor = localStorage.getItem('selectedColor');
+    if (savedColor) {
+        body.setAttribute('data-color', savedColor);
+    }
+    console.log(savedColor);
+
     buttons.forEach(function (button, index) {
         button.addEventListener('click', function() {
             let color = button.getAttribute('data-color');
-            // console.log(color);
-            // body.style.setProperty('--color-bg', color);
             body.setAttribute('data-color', color);
+            localStorage.setItem('selectedColor', color);
+            toggleButton.checked = false;
         });
     
     });

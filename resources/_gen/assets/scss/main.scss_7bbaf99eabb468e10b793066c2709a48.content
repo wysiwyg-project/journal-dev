@@ -140,7 +140,7 @@ main {
 #grid-paper {
   display: none; }
 
-#grid-switcher-checkbox:checked ~ #grid-paper {
+body[data-grid="true"] #grid-paper {
   display: block !important; }
 
 [data-color="var(--color-bg-1)"] #grid-paper {
@@ -252,16 +252,16 @@ main {
       background-color: var(--accent); }
 
 #toggle-move-checkbox:checked ~ #site-header #toggle-move,
-#grid-switcher-checkbox:checked ~ #site-header #grid-switcher {
+body[data-grid="true"] #site-header #grid-switcher {
   background-color: var(--black); }
   #toggle-move-checkbox:checked ~ #site-header #toggle-move svg,
-  #grid-switcher-checkbox:checked ~ #site-header #grid-switcher svg {
+  body[data-grid="true"] #site-header #grid-switcher svg {
     fill: var(--color-bg); }
   #toggle-move-checkbox:checked ~ #site-header #toggle-move:hover,
-  #grid-switcher-checkbox:checked ~ #site-header #grid-switcher:hover {
+  body[data-grid="true"] #site-header #grid-switcher:hover {
     background-color: var(--accent); }
     #toggle-move-checkbox:checked ~ #site-header #toggle-move:hover svg,
-    #grid-switcher-checkbox:checked ~ #site-header #grid-switcher:hover svg {
+    body[data-grid="true"] #site-header #grid-switcher:hover svg {
       fill: var(--black); }
 
 #menu ul {

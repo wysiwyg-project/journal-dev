@@ -10,7 +10,7 @@
 
 #grid-paper{ display: none; }
 
-#grid-switcher-checkbox:checked ~ #grid-paper{ display: block!important; }
+body[data-grid="true"] #grid-paper{ display: block!important; }
 
 [data-color="var(--color-bg-1)"] #grid-paper{ opacity: 0.4; }
 [data-color="var(--color-bg-2)"] #grid-paper{  opacity: 0.5; }

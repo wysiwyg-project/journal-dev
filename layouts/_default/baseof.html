@@ -30,7 +30,7 @@
     {{ $pageType = .Type }} 
 {{ end }}
 
-<body class="page-{{ $pageType }}" data-name="{{ with .File }}{{ .BaseFileName }}{{ else }}default{{ end }}" data-color="var(--color-bg-2)">
+<body class="page-{{ $pageType }}" data-name="{{ with .File }}{{ .BaseFileName }}{{ else }}default{{ end }}" data-color="var(--color-bg-2)" data-grid="true">
 	
 
 	<!-- <div id="buttons-color">
